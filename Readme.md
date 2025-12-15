@@ -6,6 +6,14 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-ff4b4b)
 ![MLOps](https://img.shields.io/badge/MLOps-End--to--End-green)
 
+## 👤 Anggota Tim  
+**Kelompok 3 – MLOps RA**
+
+1. Ukasyah Muntaha – 122450028  
+2. Abit Ahmad Oktarian – 122450042  
+3. Alvia Asrinda br Ginting – 122450077  
+4. Uliano Wilyam Purba – 122450098  
+
 ---
 
 ## 📌 Project Overview
