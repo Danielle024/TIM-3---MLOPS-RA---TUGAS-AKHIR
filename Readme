@@ -1,116 +1,110 @@
-# **🎓 YOLOv5 Object Detection – Streamlit Deployment**
+# 🎓 YOLOv5 Object Detection  
+## Streamlit Deployment | MLOps Course Project
 
-### MLOps Course Project
-
-Project ini merupakan project MLOps yang bertujuan untuk mengimplementasikan deployment model machine learning ke dalam sebuah web application interaktif menggunakan Streamlit.
-Model yang digunakan adalah **YOLOv5** untuk object detection, yang mampu mendeteksi objek pada gambar maupun video dengan menampilkan bounding box, label kelas, dan confidence score.
-Project ini menekankan pada aspek model serving, inference pipeline, dan user interaction, sebagai bagian dari penerapan konsep MLOps secara end-to-end.
-
----
-
-## 📂 Struktur Direktori
-Struktur direktori project disusun untuk memisahkan data, model, dan logic aplikasi agar mudah dikelola dan dikembangkan.
-
-```bash
-YOLOV5-STREAMLIT-DEPLOYMENT/
-├── __pycache__/                 # Cache file Python
-├── .venv/                       # Virtual environment
-│
-├── data/                        # Data input & output
-│   ├── example_images/          # Contoh gambar
-│   ├── example_videos/          # Contoh video
-│   ├── images/                  # Image hasil proses
-│   ├── uploads/                 # File yang diupload user
-│   ├── outputs/                 # Output hasil deteksi image
-│   ├── video_frames/            # Frame hasil ekstraksi video
-│   └── video_output/            # Video hasil object detection
-│
-├── models/                      # Model dan weight
-│   ├── yoloTrained.pt           # Model YOLOv5 terlatih
-│   └── yoloTrained (1).pt       # Backup model
-│
-├── app.py                       # Streamlit main application
-├── video_predict.py             # Logic inference untuk video
-│
-├── requirements.txt             # Python dependencies
-├── packages.txt                 # Package tambahan (deployment)
-├── LICENSE                      # Lisensi project
-├── README.md                    # Dokumentasi project
-├── .gitignore                   # Git ignore rules
-└── pre-commit-config.yaml       # Pre-commit configuration
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-YOLOv5-red)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-ff4b4b)
+![MLOps](https://img.shields.io/badge/MLOps-End--to--End-green)
 
 ---
 
-## **Tujuan Project**
+## 📌 Project Overview
+
+Project ini merupakan implementasi **end-to-end Machine Learning Operations (MLOps)** yang berfokus pada proses **deployment model object detection YOLOv5** ke dalam sebuah **web application interaktif menggunakan Streamlit**.
+
+Aplikasi memungkinkan pengguna melakukan inference object detection pada **image dan video**, dengan menampilkan:
+- Bounding box  
+- Label kelas  
+- Confidence score  
+
+Project ini menekankan aspek:
+- Model serving  
+- Inference pipeline  
+- User interaction  
+sebagai bagian dari penerapan MLOps secara menyeluruh.
+
+---
+
+## 🎯 Project Objectives
 - Mendeploy model YOLOv5 ke aplikasi web
-- Mengimplementasikan inference model secara real-time
-- Menyediakan antarmuka interaktif untuk pengguna
+- Menjalankan inference model secara real-time
+- Menyediakan antarmuka pengguna yang interaktif
 - Memahami alur dasar Machine Learning Operations (MLOps)
 
 ---
 
-## **🧠 Model & Teknologi**
-**Model**: YOLOv5
-**Task**: Object Detection
-**Framework**: PyTorch
-**Deployment**: Streamlit
+## 🧠 Model & Technology Stack
+
+| Component | Technology |
+|---------|------------|
+| Model | YOLOv5 |
+| Task | Object Detection |
+| Framework | PyTorch |
+| Web App | Streamlit |
+| Deployment | Local / Cloud-ready |
 
 ---
 
-## **Fitur Aplikasi**
-1. Input berupa image atau video
-2. Pilihan sumber data:
-    - Example data
-    - Upload data sendiri
-3. Pilihan device:
-    - CPU
-    - CUDA (GPU)
-4. Visualisasi hasil deteksi objek
+## 🚀 Application Features
+- Input berupa **image** atau **video**
+- Sumber data:
+  - Example image/video
+  - Upload file sendiri
+- Pilihan device:
+  - CPU
+  - CUDA (GPU)
+- Visualisasi hasil object detection secara langsung
 
 ---
 
-## 🔄 Workflow Project
-
-Workflow project ini mengikuti alur dasar **Machine Learning Operations (MLOps)** sebagai berikut:
+## 🔄 MLOps Workflow
 
 1. **Model Loading**  
-   Model YOLOv5 dimuat menggunakan framework PyTorch, dengan opsi pemilihan compute device (CPU atau CUDA).
+   Model YOLOv5 dimuat menggunakan PyTorch dengan opsi pemilihan compute device (CPU atau CUDA).
 
-2. **Input Data Selection**  
+2. **Data Input Selection**  
    Pengguna memilih sumber data berupa:
-   - Example image/video yang disediakan aplikasi, atau
+   - Example image/video yang disediakan aplikasi, atau  
    - Data image/video yang diunggah sendiri.
 
 3. **Preprocessing**
-   - Resize dan normalisasi input
-   - Penyesuaian format data sesuai kebutuhan model YOLOv5
+   - Resize dan normalisasi input  
+   - Penyesuaian format data sesuai kebutuhan YOLOv5
 
 4. **Model Inference**
-   - Model YOLOv5 dijalankan pada device yang dipilih (CPU atau CUDA)
-   - Model melakukan object detection pada input data
+   - Model dijalankan pada device yang dipilih  
+   - Proses object detection dilakukan oleh YOLOv5
 
 5. **Postprocessing**
-   - Non-Maximum Suppression (NMS)
-   - Pengambilan bounding box, label kelas, dan confidence score
+   - Non-Maximum Suppression (NMS)  
+   - Ekstraksi bounding box, label kelas, dan confidence score
 
-6. **Visualisasi & Output**
-   - Hasil deteksi ditampilkan dalam bentuk bounding box
-   - Output divisualisasikan langsung pada aplikasi Streamlit
+6. **Visualization**
+   - Hasil deteksi ditampilkan langsung pada aplikasi Streamlit
 
 ---
 
-## **👤 Anggota Tim**
-Kelompok 3 MLOPS RA
-1. Ukasyah Muntaha - 122450028
-2. Abit Ahmad Oktarian - 122450042
-3. Alvia Asrinda br Ginting - 122450077
-4. Uliano Wilyam Purba - 122450098
+## 📂 Project Structure
 
-
-
-
-
-
-
-
-
+```bash
+YOLOV5-STREAMLIT-DEPLOYMENT/
+├── data/
+│   ├── example_images/
+│   ├── example_videos/
+│   ├── uploads/
+│   ├── outputs/
+│   ├── video_frames/
+│   └── video_output/
+│
+├── models/
+│   ├── yoloTrained.pt
+│   └── yoloTrained (1).pt
+│
+├── app.py
+├── video_predict.py
+├── requirements.txt
+├── packages.txt
+├── README.md
+├── LICENSE
+├── .gitignore
+└── pre-commit-config.yaml
