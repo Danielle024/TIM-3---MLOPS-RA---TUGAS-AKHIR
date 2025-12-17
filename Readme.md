@@ -12,7 +12,7 @@
 1. Ukasyah Muntaha – 122450028  
 2. Abit Ahmad Oktarian – 122450042  
 3. Alvia Asrinda br Ginting – 122450077  
-4. Uliano Wilyam Purba – 122450098  
+4. Uliano Wilyam Purba – 122450098 
 
 ---
 
